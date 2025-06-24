@@ -8,8 +8,6 @@ where
 
 ![alt text](image.png)
 
-$$a_{i, j} = \frac{z_i*w_{ij}}{\sum_i z_i*w_{ij}}$$
-
 and
 
 $$R_i^l = \sum_j R_{i, j}^{l, l+1}.$$
