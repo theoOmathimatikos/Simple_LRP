@@ -4,7 +4,9 @@
 
 $$R_{i, j}^{l, l+1} = a_{i, j}* R_j^{l+1},$$
 
-where 
+where
+
+![alt text](image.png)
 
 $$a_{i, j} = \frac{z_i*w_{ij}}{\sum_i z_i*w_{ij}}$$
 
