@@ -2,7 +2,7 @@
 
 [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140) stands as one of the most recognized and well-accepted methods in XAI. At its core, what LRP does is to propagate the output score back to the input through the layers, by considering how the layers' parameters affect it at each step. This is captured by the rules
 
-$$R_{i, j}^{l, l+1} = \frac{z_i*w_{ij}}{\sum_i z_i*w_{ij}}R_j^{l+1},$$
+$$R_{i, j}^{l, l+1} = ({z_i*w_{ij}} / {\sum_i z_i*w_{ij}}) R_j^{l+1},$$
 
 and
 
@@ -14,7 +14,7 @@ Yet, its [official implementation](https://github.com/chr5tphr/zennit) might be 
 
 <!-- Also, the relevance values of the input and intermediate layers do not sum up to 1 (check [here](https://github.com/chr5tphr/zennit/issues/213)) -->
 
-If you notice carefully, for simple FeedForward Neural Networks (with linear layers and activation functions) LRP can be calculated in a simple forward pass: we simply need to calculate the values $\frac{z_i*w_{ij}}{\sum_i z_i*w_{ij}}$ and leave the later value $R_j^{l+1}$ for later. These values are being multiplied to a matrix of suitable shape, gathering all information.
+If you notice carefully, for simple FeedForward Neural Networks (with linear layers and activation functions) LRP can be calculated in a simple forward pass: we simply need to calculate the values ${z_i*w_{ij}}{\sum_i z_i*w_{ij}}$ and leave the later value $R_j^{l+1}$ for later. These values are being multiplied to a matrix of suitable shape, gathering all information.
 
 If you are interested in the basics ($\epsilon$-rule) or want to test Relative-LRP (where the divisor now is been eliminated), you can easily try the code.
 
