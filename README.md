@@ -24,6 +24,6 @@ If you are interested in the basics ($\epsilon$-rule) or want to test Relative-L
 
 ## How to use
 
-Download torch and run code with `python run.py`. To use a different model, consider adding its architecture in `LRP.model.py` and its parameters inside `Checkpoints`. To use a different dataset, consider passing your dataloader inside the `configuration` method in `run.py`.
+Download `torch` and run code with `python run.py`. To use a different model, consider adding its architecture to `LRP.model.py` (also pass it to `load_model` inside the aforementioned file) and its parameters inside `Checkpoints`. To use a different dataset, consider passing your dataloader and data inside the `configuration` method in `run.py`.
 
 The default model is a simple DNN with 4 layers and ReLU activations, and the default data is a subset of [Typeface MNIST](https://www.kaggle.com/datasets/nimishmagre/tmnist-typeface-mnist). Enjoy! 
