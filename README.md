@@ -2,7 +2,7 @@
 
 [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140) stands as one of the most recognized and well-accepted methods in XAI. At its core, what LRP does is to propagate the output score back to the input through the layers, by considering how the layers' parameters affect it at each step. This is captured by the rules
 
-$$R_{i, j}^{l, l+1} =  R_j^{l+1},$$
+$$R_{i, j}^{l, l+1} = [(z_i*w_{ij}) / (\sum_i z_i*w_{ij})] R_j^{l+1},$$
 
 and
 
